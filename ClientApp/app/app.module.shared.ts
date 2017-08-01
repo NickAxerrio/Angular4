@@ -4,24 +4,28 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './components/app/app.component'
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { HeroDetailComponent } from './components/hero/hero-detail.component';
+import { HeroNavigator } from './components/hero/hero-navigator.component';
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
     declarations: [
         AppComponent,
         NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        HeroDetailComponent,
+        HeroComponent,
+        HeroNavigator
     ],
     imports: [
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
+            { path: 'hero', component: HeroComponent },
+            { path: 'hero/detail/:id', component: HeroDetailComponent },
+            { path: 'heroNav', component: HeroNavigator },
+            //{ path: 'menu', component: MenuComponent },
             { path: '**', redirectTo: 'home' }
         ])
     ]

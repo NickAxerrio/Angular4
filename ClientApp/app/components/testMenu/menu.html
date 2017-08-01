@@ -1,0 +1,23 @@
+﻿<h1>{{title}}</h1>
+ 
+<collapsible-list [type]="'accordion'">
+  
+    <collapsible-list-item>
+        <collapsible-header class="waves-effect">
+            Item #1
+        </collapsible-header>
+        <collapsible-body [expanded]="false">
+            <p>Item #1 Body</p>
+        </collapsible-body>
+    </collapsible-list-item>
+ 
+    <collapsible-list-item>
+        <collapsible-header class="waves-effect">
+            Item #2
+        </collapsible-header>
+        <collapsible-body [expanded]="true">
+            <p>Item #2 Body</p>
+        </collapsible-body>
+    </collapsible-list-item>
+ 
+</collapsible-list>

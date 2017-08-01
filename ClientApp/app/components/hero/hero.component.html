@@ -1,0 +1,20 @@
+﻿<!--<h1>{{title}}</h1>
+<h2>{{hero.name}} details!</h2>
+<div><label>id: </label>{{hero.id}}</div>
+<div><label>name: </label>{{hero.name}}</div>-->
+
+<!--<div>
+    <label>name: </label>
+    <input [(ngModel)]="hero.name" placeholder="name" />
+</div>
+<div><label>extra: </label>{{hero.extra}}</div>-->
+
+<h3>Top Heroes HI</h3>
+<div class="grid grid-pad">
+    <a *ngFor="let hero of heroes"  [routerLink]="['/hero/detail', hero.id]"  class="col-1-4">
+        <div class="module hero"> 
+            <h4>{{hero.name}}</h4>
+        </div>
+    </a>
+</div>
+
