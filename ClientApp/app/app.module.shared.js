@@ -7,6 +7,7 @@ var home_component_1 = require("./components/home/home.component");
 var hero_component_1 = require("./components/hero/hero.component");
 var hero_detail_component_1 = require("./components/hero/hero-detail.component");
 var hero_navigator_component_1 = require("./components/hero/hero-navigator.component");
+var angular_oauth2_oidc_1 = require("angular-oauth2-oidc");
 exports.sharedConfig = {
     bootstrap: [app_component_1.AppComponent],
     declarations: [
@@ -18,6 +19,7 @@ exports.sharedConfig = {
         hero_navigator_component_1.HeroNavigator
     ],
     imports: [
+        angular_oauth2_oidc_1.OAuthModule.forRoot(),
         router_1.RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: home_component_1.HomeComponent },
