@@ -7,7 +7,6 @@ import { HomeComponent } from './components/home/home.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { HeroDetailComponent } from './components/hero/hero-detail.component';
 import { HeroNavigator } from './components/hero/hero-navigator.component';
-import { OAuthModule } from 'angular-oauth2-oidc';
 
 export const sharedConfig: NgModule = {
     bootstrap: [ AppComponent ],
@@ -20,7 +19,6 @@ export const sharedConfig: NgModule = {
         HeroNavigator
     ],
     imports: [
-        OAuthModule.forRoot(),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
