@@ -5,6 +5,7 @@ var app_component_1 = require("./components/app/app.component");
 var navmenu_component_1 = require("./components/navmenu/navmenu.component");
 var home_component_1 = require("./components/home/home.component");
 var hero_component_1 = require("./components/hero/hero.component");
+var user_component_1 = require("./components/user/user.component");
 var hero_detail_component_1 = require("./components/hero/hero-detail.component");
 var hero_navigator_component_1 = require("./components/hero/hero-navigator.component");
 exports.sharedConfig = {
@@ -15,6 +16,7 @@ exports.sharedConfig = {
         home_component_1.HomeComponent,
         hero_detail_component_1.HeroDetailComponent,
         hero_component_1.HeroComponent,
+        user_component_1.UserComponent,
         hero_navigator_component_1.HeroNavigator
     ],
     imports: [
@@ -24,6 +26,7 @@ exports.sharedConfig = {
             { path: 'hero', component: hero_component_1.HeroComponent },
             { path: 'hero/detail/:id', component: hero_detail_component_1.HeroDetailComponent },
             { path: 'heroNav', component: hero_navigator_component_1.HeroNavigator },
+            { path: 'user', component: user_component_1.UserComponent },
             //{ path: 'menu', component: MenuComponent },
             { path: '**', redirectTo: 'home' }
         ])
